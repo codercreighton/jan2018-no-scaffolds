@@ -1,0 +1,23 @@
+<h1> Welcome to My App</h1>
+
+<div style="margin: 50px">
+	<%= form_tag create_users_path do %>
+		<%= text_field_tag :name, nil, placeholder: "Enter your name" %><br \>
+		<%= number_field_tag :age, nil, placeholder: "Enter your age" %><br \>
+		<%= submit_tag "Create User" %>
+	<% end %>
+</div>
+
+
+
+<div style="margin: 50px">
+	<%= form_for @product do |f| %>
+		<%= f.text_field :name, placeholder: "Enter your name" %><br \>
+		<%= f.number_field :price, placeholder: "Enter price", step: :any %><br \>
+		<%= f.number_field :quantity, placeholder: "Enter quantity" %><br \>
+		<%= f.submit "Enter Product" %>
+	<% end %>	
+</div>
+
+
+<%= link_to "All Users", users_path %>

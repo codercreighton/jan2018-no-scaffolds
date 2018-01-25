@@ -1,0 +1,11 @@
+
+<h1>Editing User <%= @user.name %></h1>
+
+<div style="margin: 50px">
+	<%= form_tag update_user_path do %>
+		<%= hidden_field_tag :id, @user.id  %>
+		<%= text_field_tag :name, @user.name, placeholder: "Enter your name" %><br \>
+		<%= number_field_tag :age, @user.age, placeholder: "Enter your age" %><br \>
+		<%= submit_tag "Update User" %>
+	<% end %>
+</div>
